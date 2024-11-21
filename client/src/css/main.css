@@ -3,6 +3,7 @@
   height: 100vh;
   overflow-x: hidden;
   animation: fadeInMain 1s ease-in-out;
+  transition: all.3s  ease-in-out;
 }
 @keyframes fadeInMain {
   from {

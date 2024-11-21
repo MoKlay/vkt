@@ -3,6 +3,8 @@
 @import url('./Alert.css');
 @import url('./main.css');
 @import url('./Ticket.css');
+@import url('./Admin.css');
+@import url('./Chat.css');
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
@@ -17,6 +19,7 @@
 
 html{
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -68,7 +71,8 @@ header ul {
 
   gap: 20px;
 }
-header ul a {
+header ul :where(a,p) {
+  cursor: pointer;
   font-size: 14px;
   text-decoration: none;
   color: black;

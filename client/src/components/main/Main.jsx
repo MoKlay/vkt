@@ -1,10 +1,14 @@
 import React from 'react'
-import Ticket from './Ticket'
 
-export default function Main({auth}) {
-  const [openTicket, setOpenTicket] = React.useState(false)
+export default function Main({ setOpenTicket, setOpenChat, openChat}) {
+  
   return (
-    <div className='main-container'>
+    <>
+    <div className='main-container' style={{
+      transform: openChat && 'translateX(-100%)',
+      position: 'fixed',
+      opacity: openChat && 0,
+    }}>
       <div className='page' id='main'>
         <span>
           <h3>Интеллектуальная система образовательной организации</h3>
@@ -18,10 +22,12 @@ export default function Main({auth}) {
         <div className="con-btn">
           <button className='btn' onClick={() => setOpenTicket(true)}>Создать запрос</button>
           
-          <button className='chat-button chat-button-text btn' disabled>Чат-бот</button>
+          <button className='chat-button chat-button-text btn' onClick={() => {
+            setOpenChat(true)
+          }}>Чат-бот</button>
 
         </div>
-        {openTicket && <Ticket setOpenTicket={setOpenTicket} auth={auth}/>}
+        
       </div>
       <div className="page" id='FAQ'>
         <div className='con'>
@@ -81,6 +87,7 @@ export default function Main({auth}) {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

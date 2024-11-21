@@ -1,6 +1,6 @@
 -- Функция для добавления заявки
 CREATE OR REPLACE FUNCTION add_ticket(p_user_id INTEGER, p_type_id INTEGER, p_description TEXT)
-RETURNS INTEGER AS $$
+RETURNS TEXT AS $$
 DECLARE
   v_ticket_id INTEGER;
 BEGIN
@@ -19,7 +19,7 @@ BEGIN
   VALUES (p_user_id, p_type_id, p_description, 'new')
   RETURNING ticket_id INTO v_ticket_id;
 
-  RETURN v_ticket_id; -- Возвращаем ID созданной заявки
+  RETURN 'Запрос отправлен'; -- Возвращаем ID созданной заявки
 EXCEPTION
   WHEN OTHERS THEN
     RAISE EXCEPTION 'Ошибка при добавлении заявки: %', SQLERRM;

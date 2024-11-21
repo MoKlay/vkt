@@ -21,7 +21,6 @@ user.get("/", (req, res) => {
 
 user.post('/login', (req, res) => {
     getUserEmail(req.body.email, req.body.password).then((value) => {
-        console.log(value);
         
         if (value.rows.length === 1) 
         res.send(value.rows[0])

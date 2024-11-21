@@ -1,0 +1,150 @@
+
+
+
+
+.admin .con {
+  width: 100%;
+  margin: auto;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 14px; /* Скругление углов */
+  overflow: hidden;
+  padding: 20px; /* Отступы внутри контейнера */
+}
+
+.admin h1 {
+  font-size: 24px;
+  color: rgba(32, 34, 36, 1);
+  margin-bottom: 20px;
+  text-align: left; /* Левое выравнивание заголовка */
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-table {
+  width: 100%;
+  border: 1px solid rgba(215, 215, 215, 1); /* Серая обводка */
+  border-radius: 8px; /* Скругление краев */
+  overflow: hidden; /* Убирает выступающие элементы */
+}
+
+.filter-table td {
+  padding: 15px; /* Увеличенные отступы */
+}
+
+.filter-dropdown {
+  width: 100%;
+  padding: 10px; /* Увеличены отступы */
+  border: 1px solid rgba(215, 215, 215, 1);
+  border-radius: 4px;
+}
+
+.reset {
+  padding: 10px 20px; /* Увеличенные отступы */
+  color: rgba(255, 59, 48, 1); /* Красный цвет */
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 8px; /* Скругление углов таблицы */
+  overflow: hidden; /* Удаляет выступающие части */
+}
+
+.requests-table th {
+  background-color: rgba(245, 245, 245, 1);
+  padding: 20px 15px; /* Отступы сверху и снизу */
+  text-align: left; /* Выравнивание по левому краю */
+}
+
+.requests-table th, .requests-table td {
+  padding: 20px 15px; /* Отступы сверху и снизу */
+  border-bottom: 1px solid rgba(215, 215, 215, 1); /* Горизонтальные линии */
+}
+
+.requests-table td {
+  border-left: none; /* Удаляем вертикальные линии между ячейками */
+  border-right: none; /* Удаляем вертикальные линии между ячейками */
+  position: relative; /* Для дальнейшего позиционирования элементов */
+}
+
+.status {
+  border-radius: 8px;
+  display: flex; /* Используем flexbox для центровки */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  font-weight: 800; /* Жирный текст */
+  height: 27px; /* Определяем высоту */
+  margin: 15px 0 5px; /* Добавляем отступ сверху и снизу для визуального разделения */
+}
+
+.status.closed {
+  width: 150px; /* Ширина прямоугольника */
+  margin-top: 10px;
+  color: #00B69B; /* Белый текст для контраста */
+  background: rgb(0, 182, 155, 0.3); /* Полупрозрачный фон */
+  position: relative; /* Устанавливаем относительное позиционирование */
+  overflow: hidden; /* Прятать все, что выходит за пределы */
+  text-align: center; /* Центрирование текста */
+}
+
+.status.otkl{
+  width: 150px; /* Ширина прямоугольника */
+  margin-top: 10px;
+  color: rgb(239, 56, 38); /* Белый текст для контраста */
+  background: rgb(239, 56, 38, 0.3); /* Полупрозрачный фон */
+  position: relative; /* Устанавливаем относительное позиционирование */
+  overflow: hidden; /* Прятать все, что выходит за пределы */
+  text-align: center; /* Центрирование текста */
+}
+
+.status.in-progress {
+  width: 150px; /* Ширина прямоугольника */
+  margin-top: 10px;
+  color: rgb(98, 38, 239); /* Белый текст для контраста */
+  background: rgb(98, 38, 239, 0.3); /* Полупрозрачный фон */
+  position: relative; /* Устанавливаем относительное позиционирование */
+  overflow: hidden; /* Прятать все, что выходит за пределы */
+  text-align: center; /* Центрирование текста */
+}
+
+.status.completed {
+  width: 150px; /* Ширина прямоугольника */
+  margin-top: 10px;
+  color: rgb(176, 182, 0); /* Белый текст для контраста */
+  background: rgb(176, 182, 0, 0.3); /* Полупрозрачный фон */
+  position: relative; /* Устанавливаем относительное позиционирование */
+  overflow: hidden; /* Прятать все, что выходит за пределы */
+  text-align: center; /* Центрирование текста */
+}
+
+.status.received {
+  width: 150px; /* Ширина прямоугольника */
+  margin-top: 10px;
+  color: rgb(86, 86, 86); /* Белый текст для контраста */
+  background: rgb(86, 86, 86, 0.3); /* Полупрозрачный фон */
+  position: relative; /* Устанавливаем относительное позиционирование */
+  overflow: hidden; /* Прятать все, что выходит за пределы */
+  text-align: center; /* Центрирование текста */
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 20px; /* Увеличенные отступы */
+  background-color: #5A8CFE;
+  color: white;
+  border: none;
+  border-radius: 4px; /* Скругление углов кнопки */
+  cursor: pointer;
+}
