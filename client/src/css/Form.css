@@ -1,0 +1,199 @@
+.form-container {
+  background: rgba(255, 255, 255, 1); /* Полупрозрачный белый фон для формы */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-width: 400px;
+  text-align: center; /* Центрирование текста */
+  position: relative;
+  animation: visform 1s ease-in-out;
+}
+
+
+@keyframes fadeIn {
+  from{
+    transform: translateY(-200%);
+  }
+}
+@keyframes fadeOut {
+  from {
+    transform: none;
+  }
+  to{
+    transform: translateY(-200%);
+  }
+}
+.loyaut{
+  width: 100%;
+  transition: all.3s ease-in-out;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.login, .auth{
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+.login {
+  transform: translateX(-100%);
+}
+.auth {
+  transform: translateX(100%);
+}
+.form-container:has(.login.active) .login,
+.form-container:has(.auth.active) .auth{
+  position:relative;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+}
+
+.form-container h1 {
+  font-size: 24px;
+  margin: 5px;
+}
+
+.form-container p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.form-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: normal; /* Установлено значение normal для обычного шрифта */
+}
+
+.form-container input, .select>p, textarea {
+  padding: 13px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  background-color: #F1F4F9;
+  resize: none;
+}
+
+.form-container input:focus, textarea:focus {
+  border-color: #90CAF9; /* Light blue focus border */
+  outline: none;
+}
+.form-container input::placeholder{
+  transition: all.3s ease-in-out;
+}
+.form-container input:focus::placeholder{
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+
+.signup-text p {
+  background:none;
+  outline: 0;
+  border: 0;
+  color: #2196F3;
+  text-decoration: none;
+  font-weight: bold; /* Сделано жирным */
+  transition: all.3s ease-in-out;
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.signup-text p::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  background-color: #2196F3;
+  transition: all.3s ease-in-out;
+}
+.signup-text p:hover::after{
+  width: 100%;
+}
+
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #90CAF9; /* Цвет границы при фокусе */
+  outline: none; /* Убрать обводку */
+}
+
+.btn {
+  position: relative;
+  margin-top: 10px;
+  padding: 13px 30px; /* Паддинг внутри кнопки */
+  background: #4880FF; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  border: none; /* Без границы */
+  border-radius: 8px; /* Скругление углов кнопки */
+  font-weight: bold; /* Жирный текст */
+  cursor: pointer; /* Курсор при наведении */
+  font-size: 16px; /* Размер текста */
+  transition: all.3s ease-in-out; 
+}
+
+.btn:hover {
+  background: #4880FF; /* Цвет при наведении */
+  box-shadow: 0 1px 4px 1px black;
+}
+.btn:disabled {
+  filter: brightness(0.5);
+  pointer-events: none;
+}
+.defdis:disabled:hover:after{
+  content: 'В разработке';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #CCC;
+  display: flex;
+}
+.select{
+  position: relative;
+  margin: 0;
+}
+.select input {
+  display: none;
+}
+.select>p{
+  text-align: start;
+}
+.select ul{
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  background-color: #F1F4F9;
+  border-radius: 0 0 8px 8px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid #CCC;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  bottom: 0;
+  transform: translateY(100%);
+}
+.select button:hover{
+  background-color: aliceblue;
+}
+
+.select:has(>input:checked) ul{
+
+  visibility: visible;
+
+}
+.select button{
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  width: 100%;
+  text-align: start;
+  margin: 0;
+  padding: 5px 13px;
+}

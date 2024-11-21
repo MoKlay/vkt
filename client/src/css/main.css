@@ -1,0 +1,135 @@
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  animation: fadeInMain 1s ease-in-out;
+}
+@keyframes fadeInMain {
+  from {
+    transform: translateY(100vh);
+  }
+}
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+.page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#main {
+  gap: 30px;
+}
+#main span > h3 {
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 5px;
+  color: #5a8cfe;
+}
+#main span > h1 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 62px;
+  width: 706px;
+  text-align: center;
+}
+#main > p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  width: 811px;
+  color: #565656;
+}
+
+#FAQ {
+  background-color: #5a8cfe;
+}
+#FAQ .con {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#FAQ h1 {
+  font-size: 32px;
+  color: white;
+  margin: 10px 0;
+}
+
+#FAQ .tabs {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+#FAQ .tabs label {
+  transition: all.3s ease-in-out;
+  display: block;
+  border-radius: 8px;
+  background-color: white;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+#FAQ .tabs label:has(input:checked) {
+  background-color: #202224;
+  color: white;
+}
+
+#FAQ input {
+  display: none;
+}
+
+#FAQ .faq-con {
+  list-style: none;
+  background-color: white;
+  width: 70vw;
+  border-radius: 24px;
+}
+#FAQ .faq-con * {
+  transition: all.3s ease-in-out;
+}
+
+#FAQ .faq-con label {
+  display: flex;
+  padding: 30px 40px;
+  flex-direction: column;
+}
+
+#FAQ .faq-con label:has(input:checked) p {
+  visibility: visible;
+  opacity: 1;
+  position: static;
+}
+
+#FAQ .faq-con p {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+#main .chat-button {
+  border-radius: 8px;
+  border: 0;
+  display: flex;
+  max-width: 130px;
+  flex-direction: column;
+  color: rgb(72, 128, 255);
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: -0.07px;
+  font: 700 20px/1.2 "Nunito Sans", sans-serif;
+}
+#main .chat-button-text {
+  border-radius: 8px;
+  background-color: rgb(219, 230, 255);
+  padding: 15px 26px;
+}
+
+#main .con-btn {
+  display: flex;
+  gap: 10px;
+}
