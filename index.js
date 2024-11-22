@@ -13,4 +13,6 @@ app.use(express.static("public"))
 
 app.use('/api', api)
 
-app.listen(2000, () => {})
+app.use('/', express.static('public'))
+
+app.listen(80, () => {})
